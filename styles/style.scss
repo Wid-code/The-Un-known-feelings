@@ -1,0 +1,122 @@
+// fonts and variables
+@import url('https://fonts.googleapis.com/css2?family=Asset&family=Prata&display=swap');
+
+$black: #1E1C1E;
+$funky-font: 'Asset', cursive;
+$typing-font: 'Prata', serif;
+
+// styling components
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+// header section - first two components, landign page and introduction
+
+.wrapper__header{
+    height: auto;
+    width: 100vw;
+    .header{
+        height: 100vh;
+        width: 100vw; 
+    }
+    .header__one{
+        position: fixed;
+        .header__bgc{
+            height: 100vh;
+            width: 100vw;
+
+            position: absolute;
+            p{
+                height: calc(100vh/6);
+                width: 100vw;
+                // color: rgb(221, 218, 218);
+                // color: rgb(220, 250, 250);
+                color: #fff;
+                text-shadow: -3px 2px 2px rgba(150, 150, 150, 0.3);
+
+                font-family: $funky-font;
+                font-size: 64px;
+                line-height: calc(100vh/6);
+                letter-spacing: 5px;
+                text-align: center;
+
+                b{
+                    color: $black;
+                }
+            }
+        }
+        .header__card{
+            height: 300px;
+            width: 600px;
+            
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+
+            background-color: #fff;
+            border: $black solid 2px;
+            padding: 15px 30px;
+            h1{
+                width: 100%;
+                margin-bottom: 30px;
+
+                font-size: 40px;
+                text-align: center;
+            }
+            h2{
+                font-size: 35px;
+                letter-spacing: 2px;
+                margin: 15px 0;
+            }
+            .typed{
+                display: inline-block;
+                font-size: 35px;
+                letter-spacing: 2px;
+                border-bottom: 1px dotted $black;
+            }
+        }
+        // .typing{
+        //     position: absolute;
+        //     transform: translateY(-50%);
+        //     padding: 10px;
+
+        //     color: $black;
+        //     font-family: $typing-font;
+        //     letter-spacing: 4px;
+        //     text-transform: uppercase;
+        //     background-color: #fff;
+        // }
+        // h1.typing{
+        //     top: 64%;
+        //     left: 15%;
+
+        //     font-size: 40px;
+        // }
+        // h2.typing{
+        //     top: 72%;
+        //     left: 15%;
+
+        //     font-size: 28px;
+        // }
+    }
+    .header__two{
+        position: absolute;
+        top: 100vh;
+        left: 0;
+        background-color: $black;
+    }
+}

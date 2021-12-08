@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Asset&family=Prata&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper__header {
+  height: auto;
+  width: 100vw;
+}
+
+.wrapper__header .header {
+  height: 100vh;
+  width: 100vw;
+}
+
+.wrapper__header .header__one {
+  position: fixed;
+}
+
+.wrapper__header .header__one .header__bgc {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+}
+
+.wrapper__header .header__one .header__bgc p {
+  height: calc(100vh/6);
+  width: 100vw;
+  color: #fff;
+  text-shadow: -3px 2px 2px rgba(150, 150, 150, 0.3);
+  font-family: "Asset", cursive;
+  font-size: 64px;
+  line-height: calc(100vh/6);
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.wrapper__header .header__one .header__bgc p b {
+  color: #1E1C1E;
+}
+
+.wrapper__header .header__one .header__card {
+  height: 300px;
+  width: 600px;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  background-color: #fff;
+  border: #1E1C1E solid 2px;
+  padding: 15px 30px;
+}
+
+.wrapper__header .header__one .header__card h1 {
+  width: 100%;
+  margin-bottom: 30px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.wrapper__header .header__one .header__card h2 {
+  font-size: 35px;
+  letter-spacing: 2px;
+  margin: 15px 0;
+}
+
+.wrapper__header .header__one .header__card .typed {
+  display: inline-block;
+  font-size: 35px;
+  letter-spacing: 2px;
+  border-bottom: 1px dotted #1E1C1E;
+}
+
+.wrapper__header .header__two {
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  background-color: #1E1C1E;
+}
+/*# sourceMappingURL=style.css.map */
