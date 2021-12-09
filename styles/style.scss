@@ -1,9 +1,9 @@
 // fonts and variables
-@import url('https://fonts.googleapis.com/css2?family=Asset&family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asset&family=Open+Sans+Condensed:wght@300&family=Prata&display=swap');
 
 $black: #1E1C1E;
 $funky-font: 'Asset', cursive;
-$typing-font: 'Prata', serif;
+$typing-font: 'Open Sans Condensed', sans-serif;
 
 // styling components
 
@@ -64,11 +64,12 @@ body::-webkit-scrollbar{
             width: 600px;
             
             position: absolute;
-            bottom: 30px;
-            left: 30px;
+            bottom: 20px;
+            left: 20px;
 
             background-color: #fff;
             border: $black solid 2px;
+            border-radius: 20px;
             padding: 15px 30px;
             h1{
                 width: 100%;
@@ -76,47 +77,76 @@ body::-webkit-scrollbar{
 
                 font-size: 40px;
                 text-align: center;
+                letter-spacing: 6px;
+                font-family: $typing-font;
             }
             h2{
                 font-size: 35px;
                 letter-spacing: 2px;
                 margin: 15px 0;
+                font-family: $typing-font;
             }
             .typed{
+                position: relative;
                 display: inline-block;
                 font-size: 35px;
                 letter-spacing: 2px;
-                border-bottom: 1px dotted $black;
             }
+            // .typed::after{
+            //     content: "";
+            //     position: absolute;
+            //     right: -10px;
+            //     height: 42px;
+            //     border-right: 3px solid $black;
+            //     opacity: 0;
+            //     animation: blink 0.5s infinite ease;
+            // }
+
+            // @keyframes blink{
+            //     0%{
+            //         opacity: 0;
+            //     }
+            //     100%{
+            //         opacity: 1;
+            //     }
+            // }
         }
-        // .typing{
-        //     position: absolute;
-        //     transform: translateY(-50%);
-        //     padding: 10px;
-
-        //     color: $black;
-        //     font-family: $typing-font;
-        //     letter-spacing: 4px;
-        //     text-transform: uppercase;
-        //     background-color: #fff;
-        // }
-        // h1.typing{
-        //     top: 64%;
-        //     left: 15%;
-
-        //     font-size: 40px;
-        // }
-        // h2.typing{
-        //     top: 72%;
-        //     left: 15%;
-
-        //     font-size: 28px;
-        // }
     }
     .header__two{
         position: absolute;
         top: 100vh;
         left: 0;
         background-color: $black;
+        overflow: hidden;
+        .header__imgWrapper{
+            position: absolute;
+            top: 100%;
+            left: 5%;
+            transform: translateY(-50%);
+            opacity: 0;
+
+            // border: 2px solid #E56717;
+            border: 2px solid #E3CD7D;
+            // border: 2px solid #4FE3CD;
+            img{
+                height: 80vh;
+            }
+        }
+        .imgSlideIn{
+            animation: imgSlideIn forwards 1.5s ease;
+
+            @keyframes imgSlideIn{
+                0%{
+                    top: 100%;
+                }
+                20%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                    top: 50%;
+                }
+            }
+        }
     }
 }
